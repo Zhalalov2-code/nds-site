@@ -1,0 +1,21 @@
+[build]
+  command = "vite build"
+  publish = "."
+  functions = "netlify/functions"
+
+[dev]
+  # Public pages are plain static files; only admin-src/ goes through Vite
+  # (see vite.config.js). Force static mode so `netlify dev` doesn't try to
+  # auto-detect a framework and re-run the production build on every start.
+  framework = "#static"
+  publish = "."
+
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/:splat"
+  status = 200
+
+[[redirects]]
+  from = "/admin/*"
+  to = "/admin/index.html"
+  status = 200

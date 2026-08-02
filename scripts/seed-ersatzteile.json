@@ -1,0 +1,209 @@
+[
+  {
+    "id": "seed-teil-1",
+    "createdAt": 1785695778453,
+    "category": "Kupplung",
+    "name": "Kupplungssatz für MAN TGA 460 – 430",
+    "meta": "Ab 10 Stück: 650,00 € netto / Stück",
+    "price": 750,
+    "image": "/api/images?key=teil-1.jpg"
+  },
+  {
+    "id": "seed-teil-2",
+    "createdAt": 1785695778454,
+    "category": "Elektrik",
+    "name": "Anlasser für Mercedes-Benz Actros MP2",
+    "meta": "",
+    "price": 400,
+    "image": "/api/images?key=teil-2.jpg"
+  },
+  {
+    "id": "seed-teil-3",
+    "createdAt": 1785695778455,
+    "category": "Bremsen",
+    "name": "Bremsscheibe für Mercedes-Benz Actros MP2",
+    "meta": "Ab 10 Stück: 80,00 € netto / Stück",
+    "price": 100,
+    "image": "/api/images?key=teil-3.jpg"
+  },
+  {
+    "id": "seed-teil-4",
+    "createdAt": 1785695778456,
+    "category": "Kabine",
+    "name": "Luftbalg Fahrerhaus vorne für MAN F2000",
+    "meta": "",
+    "price": 170,
+    "image": "/api/images?key=teil-4.jpg"
+  },
+  {
+    "id": "seed-teil-5",
+    "createdAt": 1785695778457,
+    "category": "Elektrik",
+    "name": "Heizgebläse für MAN",
+    "meta": "",
+    "price": 200,
+    "image": "/api/images?key=teil-5.jpg"
+  },
+  {
+    "id": "seed-teil-6",
+    "createdAt": 1785695778458,
+    "category": "Motoren",
+    "name": "Wasserpumpe für Scania R124/420 mit Intarder",
+    "meta": "",
+    "price": 300,
+    "image": "/api/images?key=teil-6.jpg"
+  },
+  {
+    "id": "seed-teil-7",
+    "createdAt": 1785695778459,
+    "category": "Zubehör",
+    "name": "Hydraulikpumpe",
+    "meta": "",
+    "price": null,
+    "image": "/api/images?key=teil-7.jpg"
+  },
+  {
+    "id": "seed-teil-8",
+    "createdAt": 1785695778460,
+    "category": "Bremsen",
+    "name": "Bremsbeläge für DAF XF 105, vorne und hinten",
+    "meta": "",
+    "price": 100,
+    "image": "/api/images?key=teil-8.jpg"
+  },
+  {
+    "id": "seed-teil-9",
+    "createdAt": 1785695778461,
+    "category": "Motoren",
+    "name": "Zylinderkopfdichtungssatz für MAN-Motor Typ D2866 – D2865",
+    "meta": "",
+    "price": 40,
+    "image": "/api/images?key=teil-9.jpg"
+  },
+  {
+    "id": "seed-teil-10",
+    "createdAt": 1785695778462,
+    "category": "Kupplung",
+    "name": "Kupplungskraftverstärker für MAN F2000 – TGA",
+    "meta": "",
+    "price": 320,
+    "image": "/api/images?key=teil-10.jpg"
+  },
+  {
+    "id": "seed-teil-11",
+    "createdAt": 1785695778463,
+    "category": "Bremsen",
+    "name": "Lufttrocknerpatrone mit Heizung für MAN TGA",
+    "meta": "",
+    "price": 350,
+    "image": "/api/images?key=teil-11.jpg"
+  },
+  {
+    "id": "seed-teil-12",
+    "createdAt": 1785695778464,
+    "category": "Achsen",
+    "name": "Federspeicher Hinterachse für Scania R 124/420 – 470",
+    "meta": "",
+    "price": 350,
+    "image": "/api/images?key=teil-12.jpg"
+  },
+  {
+    "id": "seed-teil-13",
+    "createdAt": 1785695778465,
+    "category": "Kupplung",
+    "name": "Kupplungskraftverstärker für Mercedes-Benz Actros MP1 – MP2 (Schaltgetriebe)",
+    "meta": "",
+    "price": 390,
+    "image": "/api/images?key=teil-13.jpg"
+  },
+  {
+    "id": "seed-teil-14",
+    "createdAt": 1785695778466,
+    "category": "Bremsen",
+    "name": "Lufttrockner mit Vierkreisschutzventil für DAF XF 105",
+    "meta": "",
+    "price": 700,
+    "image": "/api/images?key=teil-14.jpg"
+  },
+  {
+    "id": "seed-teil-15",
+    "createdAt": 1785695778467,
+    "category": "Kupplung",
+    "name": "Kupplungskraftverstärker (Wabco) für Mercedes-Benz Actros MP2, ab Baujahr 2005",
+    "meta": "Gebraucht, funktionsfähig · Garantieteil-Nr. 9701500020",
+    "price": 400,
+    "image": "/api/images?key=teil-15.jpg"
+  },
+  {
+    "id": "seed-teil-16",
+    "createdAt": 1785695778468,
+    "category": "Kupplung",
+    "name": "Kupplungskraftverstärker für Volvo FH12 und F10",
+    "meta": "Neu",
+    "price": 250,
+    "image": "/api/images?key=teil-16.jpg"
+  },
+  {
+    "id": "seed-teil-17",
+    "createdAt": 1785695778469,
+    "category": "Kupplung",
+    "name": "Kupplungskraftverstärker für Volvo FL6",
+    "meta": "Neu",
+    "price": 200,
+    "image": "/api/images?key=teil-17.jpg"
+  },
+  {
+    "id": "seed-teil-18",
+    "createdAt": 1785695778470,
+    "category": "Motoren",
+    "name": "Steckpumpe für Scania Mod. 124",
+    "meta": "Neu · Originalteil-Nr. 574380",
+    "price": 600,
+    "image": "/api/images?key=teil-18.jpg"
+  },
+  {
+    "id": "seed-teil-19",
+    "createdAt": 1785695778471,
+    "category": "Motoren",
+    "name": "Turbolader für Scania, Mod.-Nr. HX55-1441521",
+    "meta": "Neu · Originalteil",
+    "price": 500,
+    "image": "/api/images?key=teil-19.jpg"
+  },
+  {
+    "id": "seed-teil-20",
+    "createdAt": 1785695778472,
+    "category": "Bremsen",
+    "name": "EBS-Modul Vorderachse für Scania",
+    "meta": "Teile-Nr. 1867012",
+    "price": 450,
+    "image": "/api/images?key=teil-20.jpg"
+  },
+  {
+    "id": "seed-teil-21",
+    "createdAt": 1785695778473,
+    "category": "Kabine",
+    "name": "Kabinendämpfer vorne für MAN F2000",
+    "meta": "Neu · Preis pro Stück",
+    "price": 120,
+    "image": "/api/images?key=teil-21.jpg"
+  },
+  {
+    "id": "seed-teil-22",
+    "createdAt": 1785695778474,
+    "category": "Motoren",
+    "name": "Motorsteuergerät für Mercedes-Benz Actros 1840 LS",
+    "meta": "Bj. 1999–2003 · Motortyp OM501 LA III/18-00 · Motor-Nr. 54194700371886",
+    "price": 800,
+    "image": "/api/images?key=teil-22.jpg"
+  },
+  {
+    "id": "seed-teil-23",
+    "createdAt": 1785695778475,
+    "category": "Elektrik",
+    "name": "Anlasser für Scania (Originalteil)",
+    "meta": "Teile-Nr. 571467 · Bosch-Nr. 0001241001",
+    "price": 500,
+    "image": "/api/images?key=teil-23.jpg"
+  }
+]
