@@ -1,209 +1,186 @@
 [
   {
     "id": "seed-teil-1",
-    "createdAt": 1785695778453,
     "category": "Kupplung",
     "name": "Kupplungssatz für MAN TGA 460 – 430",
     "meta": "Ab 10 Stück: 650,00 € netto / Stück",
     "price": 750,
-    "image": "/api/images?key=teil-1.jpg"
+    "image": "image/ersatzteile/Kupplungskit%20f%C3%BCr%20MAN%20TGA%20460%20-%20430.jpg"
   },
   {
     "id": "seed-teil-2",
-    "createdAt": 1785695778454,
     "category": "Elektrik",
     "name": "Anlasser für Mercedes-Benz Actros MP2",
     "meta": "",
     "price": 400,
-    "image": "/api/images?key=teil-2.jpg"
+    "image": "image/ersatzteile/Anlasser%20f%C3%BCr%20Mercedes%20Actros%20MP2.jpg"
   },
   {
     "id": "seed-teil-3",
-    "createdAt": 1785695778455,
     "category": "Bremsen",
     "name": "Bremsscheibe für Mercedes-Benz Actros MP2",
     "meta": "Ab 10 Stück: 80,00 € netto / Stück",
     "price": 100,
-    "image": "/api/images?key=teil-3.jpg"
+    "image": "image/ersatzteile/Bremsscheibe%20f%C3%BCr%20Mercedes%20Actros%20MP2.jpg"
   },
   {
     "id": "seed-teil-4",
-    "createdAt": 1785695778456,
     "category": "Kabine",
     "name": "Luftbalg Fahrerhaus vorne für MAN F2000",
     "meta": "",
     "price": 170,
-    "image": "/api/images?key=teil-4.jpg"
+    "image": "image/ersatzteile/Luftbalg%20Fahrerhaus%20MAN%20F2000%20vorne.jpg"
   },
   {
     "id": "seed-teil-5",
-    "createdAt": 1785695778457,
     "category": "Elektrik",
     "name": "Heizgebläse für MAN",
     "meta": "",
     "price": 200,
-    "image": "/api/images?key=teil-5.jpg"
+    "image": "image/ersatzteile/Heizungsgebl%C3%A4se%20f%C3%BCr%20MAN.jpg"
   },
   {
     "id": "seed-teil-6",
-    "createdAt": 1785695778458,
     "category": "Motoren",
     "name": "Wasserpumpe für Scania R124/420 mit Intarder",
     "meta": "",
     "price": 300,
-    "image": "/api/images?key=teil-6.jpg"
+    "image": "image/ersatzteile/Wasserpumpe%20f%C3%BCr%20Scania%20R124-420%20mit%20Intarder.jpg"
   },
   {
     "id": "seed-teil-7",
-    "createdAt": 1785695778459,
     "category": "Zubehör",
     "name": "Hydraulikpumpe",
     "meta": "",
     "price": null,
-    "image": "/api/images?key=teil-7.jpg"
+    "image": "image/ersatzteile/Hydraulikpumpe.jpg"
   },
   {
     "id": "seed-teil-8",
-    "createdAt": 1785695778460,
     "category": "Bremsen",
     "name": "Bremsbeläge für DAF XF 105, vorne und hinten",
     "meta": "",
     "price": 100,
-    "image": "/api/images?key=teil-8.jpg"
+    "image": "image/ersatzteile/Bremskl%C3%B6tze%20f%C3%BCr%20DAF%20XF%20105%20f%C3%BCr%20Vorder%20und%20Hinterachse.jpg"
   },
   {
     "id": "seed-teil-9",
-    "createdAt": 1785695778461,
     "category": "Motoren",
     "name": "Zylinderkopfdichtungssatz für MAN-Motor Typ D2866 – D2865",
     "meta": "",
     "price": 40,
-    "image": "/api/images?key=teil-9.jpg"
+    "image": "image/ersatzteile/Zylinderkopf%20Dichtungssatz%20f%C3%BCr%20MAN%20Motor%20Typ-%20D2866%20-%20D2865.jpg"
   },
   {
     "id": "seed-teil-10",
-    "createdAt": 1785695778462,
     "category": "Kupplung",
     "name": "Kupplungskraftverstärker für MAN F2000 – TGA",
     "meta": "",
     "price": 320,
-    "image": "/api/images?key=teil-10.jpg"
+    "image": "image/ersatzteile/Kupplungsverst%C3%A4rker%20f%C3%BCr%20MAN%20F2000%20-%20TGA.jpg"
   },
   {
     "id": "seed-teil-11",
-    "createdAt": 1785695778463,
     "category": "Bremsen",
     "name": "Lufttrocknerpatrone mit Heizung für MAN TGA",
     "meta": "",
     "price": 350,
-    "image": "/api/images?key=teil-11.jpg"
+    "image": "image/ersatzteile/Lufttrockner%20Patrone%20mit%20Heizung%20f%C3%BCr%20MAN%20TGA.jpg"
   },
   {
     "id": "seed-teil-12",
-    "createdAt": 1785695778464,
     "category": "Achsen",
     "name": "Federspeicher Hinterachse für Scania R 124/420 – 470",
     "meta": "",
     "price": 350,
-    "image": "/api/images?key=teil-12.jpg"
+    "image": "image/ersatzteile/Federspeicher%20Hinterachse%20Scania%20R%20124-420%20-%20470.jpg"
   },
   {
     "id": "seed-teil-13",
-    "createdAt": 1785695778465,
     "category": "Kupplung",
     "name": "Kupplungskraftverstärker für Mercedes-Benz Actros MP1 – MP2 (Schaltgetriebe)",
     "meta": "",
     "price": 390,
-    "image": "/api/images?key=teil-13.jpg"
+    "image": "image/ersatzteile/Kupplungsverst%C3%A4rker%20f%C3%BCr%20Mercedes%20Actros%20MP1%20-%20MP2%20(Schaltgetriebe).jpg"
   },
   {
     "id": "seed-teil-14",
-    "createdAt": 1785695778466,
     "category": "Bremsen",
     "name": "Lufttrockner mit Vierkreisschutzventil für DAF XF 105",
     "meta": "",
     "price": 700,
-    "image": "/api/images?key=teil-14.jpg"
+    "image": "image/ersatzteile/Lufttrocknereinheit%20mit%20Vierkreisschutzventil%20f%C3%BCr%20DAF%20XF%20105.jpg"
   },
   {
     "id": "seed-teil-15",
-    "createdAt": 1785695778467,
     "category": "Kupplung",
     "name": "Kupplungskraftverstärker (Wabco) für Mercedes-Benz Actros MP2, ab Baujahr 2005",
     "meta": "Gebraucht, funktionsfähig · Garantieteil-Nr. 9701500020",
     "price": 400,
-    "image": "/api/images?key=teil-15.jpg"
+    "image": "image/ersatzteile/Kupplungsverst%C3%A4rker%20(Wabco)%20f%C3%BCr%20Mercedes-Benz%20Actros%20MP2%20ab%20Baujahr%202005%20(Gebraucht).jpg"
   },
   {
     "id": "seed-teil-16",
-    "createdAt": 1785695778468,
     "category": "Kupplung",
     "name": "Kupplungskraftverstärker für Volvo FH12 und F10",
     "meta": "Neu",
     "price": 250,
-    "image": "/api/images?key=teil-16.jpg"
+    "image": "image/ersatzteile/Kupplungsverst%C3%A4rker%20f%C3%BCr%20Volvo%20FH12%20u.%20F10%20(Neu).jpg"
   },
   {
     "id": "seed-teil-17",
-    "createdAt": 1785695778469,
     "category": "Kupplung",
     "name": "Kupplungskraftverstärker für Volvo FL6",
     "meta": "Neu",
     "price": 200,
-    "image": "/api/images?key=teil-17.jpg"
+    "image": "image/ersatzteile/Kupplungsverst%C3%A4rker%20f%C3%BCr%20Volvo%20FL6%20(Neu).jpg"
   },
   {
     "id": "seed-teil-18",
-    "createdAt": 1785695778470,
     "category": "Motoren",
     "name": "Steckpumpe für Scania Mod. 124",
     "meta": "Neu · Originalteil-Nr. 574380",
     "price": 600,
-    "image": "/api/images?key=teil-18.jpg"
+    "image": "image/ersatzteile/Steckpumpe%20f%C3%BCr%20Scania%20Mod.%20124%20-%20Orginalteile%20Nr.%20574380%20(Neu).jpg"
   },
   {
     "id": "seed-teil-19",
-    "createdAt": 1785695778471,
     "category": "Motoren",
     "name": "Turbolader für Scania, Mod.-Nr. HX55-1441521",
     "meta": "Neu · Originalteil",
     "price": 500,
-    "image": "/api/images?key=teil-19.jpg"
+    "image": "image/ersatzteile/Turbolader%20f%C3%BCr%20Scania%20Orginalteiel%20Mod.%20Nr.%20HX55-1441521%20(Neu).jpg"
   },
   {
     "id": "seed-teil-20",
-    "createdAt": 1785695778472,
     "category": "Bremsen",
     "name": "EBS-Modul Vorderachse für Scania",
     "meta": "Teile-Nr. 1867012",
     "price": 450,
-    "image": "/api/images?key=teil-20.jpg"
+    "image": "image/ersatzteile/EBS%20Modul%20f%C3%BCr%20Vorderachse%20Scania%20Teile%20Nr.%201867012.jpg"
   },
   {
     "id": "seed-teil-21",
-    "createdAt": 1785695778473,
     "category": "Kabine",
     "name": "Kabinendämpfer vorne für MAN F2000",
     "meta": "Neu · Preis pro Stück",
     "price": 120,
-    "image": "/api/images?key=teil-21.jpg"
+    "image": "image/ersatzteile/Fahrerhaus%20D%C3%A4mpfer%20vorne%20f%C3%BCr%20MAN%20F2000%20(Neu).jpg"
   },
   {
     "id": "seed-teil-22",
-    "createdAt": 1785695778474,
     "category": "Motoren",
     "name": "Motorsteuergerät für Mercedes-Benz Actros 1840 LS",
     "meta": "Bj. 1999–2003 · Motortyp OM501 LA III/18-00 · Motor-Nr. 54194700371886",
     "price": 800,
-    "image": "/api/images?key=teil-22.jpg"
+    "image": "image/ersatzteile/Motorsteuer%20Ger%C3%A4t%20f%C3%BCr%20Mercedes%20Benz%20Actros%20von%201840LS%20Baujahr-%201999%20bis%202003%20Motor%20Typ-%20OM501%20LA%20III-18-00%20%20Motor%20Nr.%2054194700371886.jpg"
   },
   {
     "id": "seed-teil-23",
-    "createdAt": 1785695778475,
     "category": "Elektrik",
     "name": "Anlasser für Scania (Originalteil)",
     "meta": "Teile-Nr. 571467 · Bosch-Nr. 0001241001",
     "price": 500,
-    "image": "/api/images?key=teil-23.jpg"
+    "image": "image/ersatzteile/Anlasser%20Scania%20(Orginalteil)%20Teile%20Nr.%20571467%20(%20Bosch%20Nr.%200001241001%20).jpg"
   }
 ]

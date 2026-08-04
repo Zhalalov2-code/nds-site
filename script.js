@@ -44,7 +44,8 @@
       });
   }
 
-  // Fixed nav appears once the hero is scrolled past.
+  // Fixed nav is always visible; it's see-through over the hero and turns
+  // solid once the hero is scrolled past (see .nav-solid in styles.css).
   var nav = document.getElementById("site-nav");
   var menu = document.getElementById("mobile-menu");
   var burger = nav ? nav.querySelector('button[aria-label="Menü"]') : null;
@@ -55,14 +56,14 @@
   function onScroll() {
     if (!nav) return;
     var hero = document.getElementById("hero");
-    var limit = hero
-      ? hero.offsetTop + hero.offsetHeight - 120
-      : innerHeight * 0.75;
-    var shown = scrollY > limit;
-    nav.style.transform = shown ? "translateY(0)" : "translateY(-100%)";
-    nav.style.opacity = shown ? "1" : "0";
-    nav.style.pointerEvents = shown ? "auto" : "none";
-    if (!shown) closeMenu();
+    if (!hero) {
+      // Pages without a hero (e.g. ersatzteile.html) never go transparent.
+      nav.classList.add("nav-solid");
+      return;
+    }
+    var solid = scrollY > hero.offsetTop + hero.offsetHeight - 120;
+    nav.classList.toggle("nav-solid", solid);
+    if (!solid) closeMenu();
   }
   addEventListener("scroll", onScroll, { passive: true });
   onScroll();
@@ -247,5 +248,241 @@
     v.addEventListener("ended", function () {
       v.pause();
     });
+  }
+
+  // Bilder-Karussell über "Über uns": Pfeile, Punkte, automatischer Wechsel
+  // (pausiert bei Hover/Fokus, damit man in Ruhe schauen kann).
+  var carouselTrack = document.getElementById("carousel-track");
+  if (carouselTrack) {
+    var carouselSlides = [].slice.call(carouselTrack.children);
+    var carouselDotsEl = document.getElementById("carousel-dots");
+    var carouselDots = carouselDotsEl
+      ? [].slice.call(carouselDotsEl.children)
+      : [];
+    var carouselCurrent = 0;
+    var carouselTimer = null;
+
+    function carouselGoTo(index) {
+      carouselCurrent = (index + carouselSlides.length) % carouselSlides.length;
+      carouselTrack.style.transform = "translateX(-" + carouselCurrent * 100 + "%)";
+      carouselDots.forEach(function (dot, i) {
+        dot.classList.toggle("is-active", i === carouselCurrent);
+      });
+    }
+    function carouselStop() {
+      if (carouselTimer) clearInterval(carouselTimer);
+    }
+    function carouselStart() {
+      carouselStop();
+      carouselTimer = setInterval(function () {
+        carouselGoTo(carouselCurrent + 1);
+      }, 5000);
+    }
+
+    var carouselPrev = document.getElementById("carousel-prev");
+    var carouselNext = document.getElementById("carousel-next");
+    if (carouselPrev) {
+      carouselPrev.addEventListener("click", function () {
+        carouselGoTo(carouselCurrent - 1);
+        carouselStart();
+      });
+    }
+    if (carouselNext) {
+      carouselNext.addEventListener("click", function () {
+        carouselGoTo(carouselCurrent + 1);
+        carouselStart();
+      });
+    }
+    carouselDots.forEach(function (dot, i) {
+      dot.addEventListener("click", function () {
+        carouselGoTo(i);
+        carouselStart();
+      });
+    });
+    var carouselEl = document.getElementById("hero-carousel");
+    if (carouselEl) {
+      carouselEl.addEventListener("mouseenter", carouselStop);
+      carouselEl.addEventListener("mouseleave", carouselStart);
+      carouselEl.addEventListener("focusin", carouselStop);
+      carouselEl.addEventListener("focusout", carouselStart);
+    }
+    carouselGoTo(0);
+    carouselStart();
+  }
+
+  // Kontakt-FAB und Cookie-Tab lassen sich am Rand nach oben/unten ziehen;
+  // die Position wird pro Browser in localStorage gemerkt. Beim Kontakt-FAB
+  // zieht man am Griff (nicht an den Anruf-/Mail-Links selbst), beim
+  // Cookie-Tab reicht ein Zug auf den Tab — ein echter Klick öffnet weiter
+  // das Panel, unterschieden über eine kleine Bewegungs-Schwelle.
+  function makeVerticalDraggable(el, handle, storageKey, keepTransform) {
+    if (!el || !handle) return { wasDragged: function () { return false; } };
+    var dragging = false;
+    var moved = false;
+    var startY = 0;
+    var startTop = 0;
+
+    function clampTop(top) {
+      var max = innerHeight - el.offsetHeight - 8;
+      return Math.max(8, Math.min(max, top));
+    }
+    function applyTop(top) {
+      el.style.top = clampTop(top) + "px";
+      el.style.transform = keepTransform || "none";
+    }
+    handle.addEventListener("pointerdown", function (e) {
+      dragging = true;
+      moved = false;
+      startY = e.clientY;
+      startTop = el.getBoundingClientRect().top;
+      if (handle.setPointerCapture) handle.setPointerCapture(e.pointerId);
+    });
+    handle.addEventListener("pointermove", function (e) {
+      if (!dragging) return;
+      var dy = e.clientY - startY;
+      if (Math.abs(dy) > 4) moved = true;
+      if (moved) {
+        e.preventDefault();
+        applyTop(startTop + dy);
+      }
+    });
+    function endDrag() {
+      if (!dragging) return;
+      dragging = false;
+      if (moved) {
+        try {
+          localStorage.setItem(storageKey, el.style.top);
+        } catch (e) {}
+      }
+    }
+    handle.addEventListener("pointerup", endDrag);
+    handle.addEventListener("pointercancel", endDrag);
+    addEventListener("resize", function () {
+      if (el.style.top) applyTop(parseFloat(el.style.top));
+    });
+
+    var savedTop = null;
+    try {
+      savedTop = localStorage.getItem(storageKey);
+    } catch (e) {}
+    if (savedTop) applyTop(parseFloat(savedTop));
+
+    return {
+      wasDragged: function () {
+        var m = moved;
+        moved = false;
+        return m;
+      },
+    };
+  }
+  makeVerticalDraggable(
+    document.getElementById("contact-fab"),
+    document.getElementById("fab-drag-handle"),
+    "nds_fab_pos_top",
+    "none",
+  );
+  var cookieTabDrag = null; // wired up below, once cookieTab is looked up
+
+  // Cookie-Hinweis: listet den einen echten Drittanbieterdienst der Website
+  // (Google Maps im Anfahrt-Bereich) auf. Die Karte wird erst geladen, wenn
+  // zugestimmt wurde — vorher steht nur ein Platzhalter mit Direkt-Zustimmung.
+  var COOKIE_MAPS_KEY = "nds_cookie_maps_consent"; // "1" | "0"
+  var cookieTab = document.getElementById("cookie-tab");
+  var cookiePanel = document.getElementById("cookie-panel");
+  var mapsToggle = document.getElementById("cookie-maps-toggle");
+  var mapsToggleState = document.getElementById("cookie-switch-state");
+  var saveBtn = document.getElementById("cookie-save");
+  var acceptAllBtn = document.getElementById("cookie-accept-all");
+  var resetBtn2 = document.getElementById("cookie-reset");
+  var mapsFrame = document.querySelector("iframe[data-src]");
+  var mapsOverlay = document.getElementById("maps-overlay");
+  var mapsLoadBtn = document.getElementById("maps-load-btn");
+
+  function openCookiePanel() {
+    if (cookiePanel) cookiePanel.hidden = false;
+  }
+  function closeCookiePanel() {
+    if (cookiePanel) cookiePanel.hidden = true;
+  }
+  function updateToggleLabel() {
+    if (mapsToggleState && mapsToggle) {
+      mapsToggleState.textContent = mapsToggle.checked ? "An" : "Aus";
+    }
+  }
+  function loadMaps() {
+    if (mapsFrame && mapsFrame.dataset.src && !mapsFrame.src) {
+      mapsFrame.src = mapsFrame.dataset.src;
+    }
+    if (mapsOverlay) mapsOverlay.hidden = true;
+  }
+  function applyConsent(consent) {
+    try {
+      localStorage.setItem(COOKIE_MAPS_KEY, consent ? "1" : "0");
+    } catch (e) {}
+    if (mapsToggle) mapsToggle.checked = consent;
+    updateToggleLabel();
+    if (consent) loadMaps();
+  }
+
+  cookieTabDrag = makeVerticalDraggable(
+    cookieTab,
+    cookieTab,
+    "nds_cookie_tab_pos_top",
+    "rotate(180deg)",
+  );
+  if (cookieTab) {
+    cookieTab.addEventListener("click", function () {
+      if (cookieTabDrag.wasDragged()) return;
+      openCookiePanel();
+    });
+  }
+  if (mapsToggle) mapsToggle.addEventListener("change", updateToggleLabel);
+  if (mapsLoadBtn) {
+    mapsLoadBtn.addEventListener("click", function () {
+      applyConsent(true);
+    });
+  }
+  if (saveBtn) {
+    saveBtn.addEventListener("click", function () {
+      applyConsent(!!(mapsToggle && mapsToggle.checked));
+      closeCookiePanel();
+    });
+  }
+  if (acceptAllBtn) {
+    acceptAllBtn.addEventListener("click", function () {
+      applyConsent(true);
+      closeCookiePanel();
+    });
+  }
+  if (resetBtn2) {
+    resetBtn2.addEventListener("click", function () {
+      try {
+        localStorage.removeItem(COOKIE_MAPS_KEY);
+      } catch (e) {}
+      if (mapsToggle) mapsToggle.checked = false;
+      updateToggleLabel();
+      if (mapsFrame) mapsFrame.removeAttribute("src");
+      if (mapsOverlay) mapsOverlay.hidden = false;
+      openCookiePanel();
+    });
+  }
+  if (cookiePanel) {
+    cookiePanel.addEventListener("click", function (e) {
+      if (e.target === cookiePanel) closeCookiePanel();
+    });
+  }
+
+  var storedMapsConsent = null;
+  try {
+    storedMapsConsent = localStorage.getItem(COOKIE_MAPS_KEY);
+  } catch (e) {}
+  if (storedMapsConsent === "1") {
+    applyConsent(true);
+  } else if (storedMapsConsent === "0") {
+    // User already made a choice (declined) — respect it, don't nag again.
+    updateToggleLabel();
+  } else {
+    // No decision yet — ask once.
+    openCookiePanel();
   }
 })();

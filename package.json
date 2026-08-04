@@ -3,19 +3,9 @@
   "private": true,
   "version": "1.0.0",
   "scripts": {
-    "dev": "netlify dev",
-    "build": "vite build",
-    "seed": "netlify dev:exec node scripts/seed.js"
+    "dev": "netlify dev"
   },
   "devDependencies": {
-    "@vitejs/plugin-react": "^6.0.5",
-    "netlify-cli": "^27.0.1",
-    "vite": "^8.2.0"
-  },
-  "dependencies": {
-    "@netlify/blobs": "^10.7.11",
-    "netlify-identity-widget": "^2.0.3",
-    "react": "^19.2.8",
-    "react-dom": "^19.2.8"
+    "netlify-cli": "^27.0.1"
   }
 }

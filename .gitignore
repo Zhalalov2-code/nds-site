@@ -2,7 +2,5 @@
 .netlify
 
 node_modules
-admin
-dist
 .DS_Store
 deno.lock

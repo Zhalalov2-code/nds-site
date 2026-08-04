@@ -1,7 +1,8 @@
-// Renders the Ersatzteile/Fahrzeuge cards from /api/parts and
-// /api/vehicles instead of hardcoded HTML, so edits made in /admin show up
-// on the public pages without a redeploy. One template per item type,
-// reused for both the full catalog grids and the homepage teasers.
+// Renders the Ersatzteile/Fahrzeuge cards from the static data/parts.json
+// and data/vehicles.json files instead of hardcoded HTML per item — adding
+// a new part means adding one entry to that JSON, not copying a whole
+// <article class="card"> block. One template per item type, reused for
+// both the full catalog grids and the homepage teasers.
 (function () {
   function esc(s) {
     return String(s == null ? "" : s).replace(/[&<>"']/g, function (c) {
@@ -33,8 +34,8 @@
       : "";
     var cta = opts.withCta
       ? '<a href="index.html?anliegen=Ersatzteil-Anfrage&bezug=' +
-        encodeURIComponent(p.name) +
-        '#werkstatt" class="btn btn-secondary s57">Anfragen</a>'
+      encodeURIComponent(p.name) +
+      '#werkstatt" class="btn btn-secondary s57">Anfragen</a>'
       : "";
     return (
       '<article class="card s52" data-price="' +
@@ -64,18 +65,18 @@
     opts = opts || {};
     var badge = v.badge
       ? '<span class="veh-badge' +
-        (v.badgeType === "reserved" ? " veh-badge-reserved" : "") +
-        '">' +
-        esc(v.badge) +
-        "</span>"
+      (v.badgeType === "reserved" ? " veh-badge-reserved" : "") +
+      '">' +
+      esc(v.badge) +
+      "</span>"
       : "";
     var media = badge
       ? '<div class="veh-media">' + imgTag(v.image, v.name) + badge + "</div>"
       : imgTag(v.image, v.name);
     var cta = opts.withCta
       ? '<a href="index.html?anliegen=Fahrzeugkauf%20oder%20-verkauf&bezug=' +
-        encodeURIComponent(v.name) +
-        '#werkstatt" class="btn btn-secondary s57">Anfragen</a>'
+      encodeURIComponent(v.name) +
+      '#werkstatt" class="btn btn-secondary s57">Anfragen</a>'
       : "";
     return (
       '<article class="card s52" data-year="' +
@@ -125,13 +126,12 @@
       });
   }
 
-  // Full catalog pages (fahrzeuge.html / ersatzteile.html): all items, with
-  // an "Anfragen" CTA per card.
-  render("veh-grid", "/api/vehicles", vehicleCard, { withCta: true });
-  render("teile-grid", "/api/parts", partCard, { withCta: true });
+  // Full catalog page (ersatzteile.html): all items, with an "Anfragen" CTA
+  // per card. The Fahrzeuge page/section is disabled for now (vehicleCard
+  // and data/vehicles.json are kept so it's a two-line change to bring back).
+  render("teile-grid", "data/parts.json", partCard, { withCta: true });
 
-  // Homepage teasers: first 3 items, no CTA (the section itself has one
+  // Homepage teaser: first 3 items, no CTA (the section itself has one
   // "Alle ansehen" button below the grid).
-  render("veh-teaser-grid", "/api/vehicles", vehicleCard, { limit: 3 });
-  render("teile-teaser-grid", "/api/parts", partCard, { limit: 3 });
+  render("teile-teaser-grid", "data/parts.json", partCard, { limit: 3 });
 })();

@@ -38,7 +38,6 @@
             <span class="s6"></span>
             <span class="nav-links s7">
               <a class="s8" href="#ueber-uns">Über uns</a>
-              <a class="s8" href="fahrzeuge.html">Fahrzeuge</a>
               <a class="s8" href="ersatzteile.html">Ersatzteile</a>
               <a class="s8" href="#werkstatt">Werkstatt</a>
               <a class="s8" href="#anfahrt">Anfahrt</a>
@@ -62,8 +61,6 @@
                 <a class="s13" href="#ueber-uns"><span class="sc-interp">Über uns</span></a>
 
                 <a class="s13" href="#leistungen"><span class="sc-interp">Leistungen</span></a>
-
-                <a class="s13" href="fahrzeuge.html"><span class="sc-interp">Fahrzeuge</span></a>
 
                 <a class="s13" href="ersatzteile.html"><span class="sc-interp">Ersatzteile</span></a>
 
@@ -89,15 +86,14 @@
               <div class="s21">
                 <p class="s22">
                   Meisterbetrieb für Kfz-Reparatur und Nutzfahrzeughandel in Neu
-                  Wulmstorf. LKW, PKW, Omnibusse und Anhänger — Prüfung,
-                  Reparatur, An- und Verkauf. HU, AU und SP nehmen wir im
-                  eigenen Haus ab, und wir sagen Ihnen vorher, wann Ihr Fahrzeug
-                  wieder auf der Straße steht.
+                  Wulmstorf. LKW, PKW, Omnibusse und Anhänger — geprüft,
+                  repariert, gehandelt. HU, AU und SP nehmen wir direkt bei uns
+                  im Haus ab, und Sie wissen vorher genau, wann Ihr Fahrzeug
+                  wieder einsatzbereit ist.
                 </p>
                 <div class="s23">
                   <div class="s24">
                     <a href="#werkstatt" class="btn btn-primary s25">Werkstatt-Termin anfragen</a>
-                    <a href="fahrzeuge.html" class="btn btn-ghost s26">Fahrzeuge ansehen</a>
                   </div>
                   <p class="s27">
                     Lessingstraße 59c · 21629 Neu Wulmstorf
@@ -148,6 +144,27 @@
 
           <hr class="hr s28">
 
+          <section class="carousel-section">
+            <figure class="plate s28 hero-carousel" id="hero-carousel">
+              <div class="carousel-track" id="carousel-track">
+                <img class="carousel-slide" src="image/start.jpg" alt="Service-Fahrzeuge und Fuhrpark von NDS Nutzfahrzeuge">
+                <img class="carousel-slide" src="image/start2.jpg" alt="Pannenhilfe auf der Autobahn und Werkstatthalle von NDS Nutzfahrzeuge">
+              </div>
+              <button type="button" class="carousel-arrow carousel-prev" id="carousel-prev" aria-label="Vorheriges Bild">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="15 18 9 12 15 6"></polyline></svg>
+              </button>
+              <button type="button" class="carousel-arrow carousel-next" id="carousel-next" aria-label="Nächstes Bild">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              </button>
+              <div class="carousel-dots" id="carousel-dots">
+                <button type="button" class="carousel-dot is-active" aria-label="Bild 1 anzeigen"></button>
+                <button type="button" class="carousel-dot" aria-label="Bild 2 anzeigen"></button>
+              </div>
+            </figure>
+          </section>
+
+          <hr class="hr s28">
+
           <section class="s34" id="ueber-uns">
             <div>
               <span class="s35">Über uns</span>
@@ -158,18 +175,19 @@
                 NDS Nutzfahrzeuge ist ein Meisterbetrieb in Neu Wulmstorf:
                 Kfz-Reparatur-Service und Handel unter einem Dach. Bei uns
                 arbeiten Leute, die Nutzfahrzeuge nicht nur reparieren, sondern
-                täglich kaufen, verkaufen und zerlegen — deshalb wissen wir
-                meist schon am Telefon, woran es liegt.
+                täglich kaufen, verkaufen und zerlegen — deshalb wissen wir oft
+                schon am Telefon, woran es hakt.
               </p>
               <p class="s38">
                 Vom LKW einer Spedition über den Transporter eines
-                Handwerksbetriebs bis zum Reisebus: geprüft, repariert und mit
-                einem klaren Termin zurück auf die Straße. Was wir nicht selbst
-                machen können, sagen wir Ihnen offen.
+                Handwerksbetriebs bis zum Reisebus — bei uns wird geprüft,
+                repariert und mit einem klaren Termin zurück auf die Straße
+                geschickt. Was wir nicht selbst machen können, sagen wir Ihnen
+                offen, statt Sie hinzuhalten.
               </p>
             </div>
             <figure class="plate s28">
-              <img class="s39" src="assets/4f8fd073-9d64-4853-90df-8130a2ace928.png" alt="Der Hof von NDS Nutzfahrzeuge mit Service- und Nutzfahrzeugen">
+              <img class="s39" src="image/uber-uns.png" alt="Der Hof von NDS Nutzfahrzeuge mit Service- und Nutzfahrzeugen">
             </figure>
           </section>
 
@@ -178,49 +196,51 @@
           <section class="s40" id="leistungen">
             <span class="s41">Unsere Leistungen</span>
             <div class="s42">
-              <div>
+              <div class="leistung-card">
+                <figure class="plate leistung-img">
+                  <img src="image/prufung.png" alt="Hauptuntersuchung und technische Prüfung bei NDS Nutzfahrzeuge">
+                </figure>
                 <h2 class="s43">
                   Prüfung &amp; Technik
                 </h2>
                 <p class="s44">
-                  Hauptuntersuchung, Abgasuntersuchung und Sicherheitsprüfung
-                  nehmen wir direkt bei uns ab — ohne zweiten Termin bei einer
-                  fremden Prüfstelle. Dazu Tachographendienst und Prüfung der
-                  Aufbauten.
+                  Ein Termin, keine Umwege: Hauptuntersuchung, Abgasuntersuchung
+                  und Sicherheitsprüfung nehmen wir direkt bei uns ab — kein
+                  zweiter Weg zu einer externen Prüfstelle. Dazu
+                  Tachographendienst und Prüfung der Aufbauten, alles aus einer
+                  Hand.
                 </p>
               </div>
-              <div>
+              <div class="leistung-card">
+                <figure class="plate leistung-img">
+                  <img src="image/repartur.png" alt="Reparatur und Service an Nutzfahrzeugen bei NDS Nutzfahrzeuge">
+                </figure>
                 <h2 class="s43">
                   Reparatur &amp; Service
                 </h2>
                 <p class="s44">
-                  Reparaturen aller Art an LKW, PKW und Bussen, Bremsenservice,
-                  Wartung und Diagnose. Wenn ein Fahrzeug dringend zurück in den
-                  Einsatz muss, arbeiten wir nach Absprache auch am Wochenende.
+                  Steht Ihr Fahrzeug, steht oft auch Ihr Geschäft. Reparaturen
+                  aller Art an LKW, PKW und Bussen, dazu Bremsenservice,
+                  Wartung und Diagnose — zügig und gründlich. Muss es schnell
+                  zurück in den Einsatz, schrauben wir nach Absprache auch am
+                  Wochenende.
                 </p>
               </div>
-              <div>
+              <div class="leistung-card">
+                <figure class="plate leistung-img">
+                  <img src="image/bergung.png" alt="Bergung und Abschleppservice sowie Ersatzteile bei NDS Nutzfahrzeuge">
+                </figure>
                 <h2 class="s43">
                   Bergung &amp; Teile
                 </h2>
                 <p class="s44">
-                  Abschleppservice in ganz Deutschland. Im Lager führen wir Neu-
-                  und Gebrauchtteile für Nutzfahrzeuge — von
-                  Gebrauchtkomponenten bis zu neuwertigen Ersatzteilen. Fragen
-                  Sie an, wir schauen nach.
+                  Liegengeblieben ist kein Weltuntergang: Unser Abschleppservice
+                  holt Sie deutschlandweit ab. Im Lager warten Neu- und
+                  Gebrauchtteile für Nutzfahrzeuge — vom günstigen Gebrauchtteil
+                  bis zur neuwertigen Komponente. Fragen Sie an, wir schauen
+                  nach.
                 </p>
               </div>
-            </div>
-            <div class="s45">
-              <figure class="plate s28">
-                <img class="s46" src="assets/9f82a3bf-0a7a-4fe1-a9b7-afc7e10ca702.png" alt="Werkstatthalle">
-              </figure>
-              <figure class="plate s28">
-                <img class="s46" src="assets/52ff4bf2-f421-4db9-83a8-8dc587ab0a5e.png" alt="Abschleppservice, LKW auf dem Tieflader">
-              </figure>
-              <figure class="plate s28">
-                <img class="s46" src="assets/32c81679-6396-4110-9857-9da8f02871dd.png" alt="Gebrauchte Motorkomponenten aus dem Lager">
-              </figure>
             </div>
           </section>
 
@@ -232,36 +252,16 @@
                 <span class="s41">Für Firmenkunden</span>
                 <h2 class="s36">Flotten und Speditionen willkommen</h2>
                 <p class="s44">
-                  Für Speditionen, Handwerksbetriebe und andere Unternehmen
-                  mit mehreren Fahrzeugen bieten wir feste Ansprechpartner,
-                  priorisierte Termine bei Ausfällen und Sammelrechnung.
-                  Sprechen Sie uns auf ein Wartungspaket für Ihren Fuhrpark
-                  an.
+                  Jeder Fahrzeugausfall kostet Zeit und Geld. Deshalb bekommen
+                  Speditionen, Handwerksbetriebe und andere Unternehmen mit
+                  mehreren Fahrzeugen bei uns einen festen Ansprechpartner,
+                  bevorzugte Termine bei Ausfällen und eine Sammelrechnung
+                  statt Zettelwirtschaft. Sprechen Sie uns auf ein
+                  Wartungspaket für Ihren Fuhrpark an.
                 </p>
                 <a href="#werkstatt" class="btn btn-secondary">Flottenanfrage stellen</a>
               </div>
             </div>
-          </section>
-
-          <hr class="hr s28">
-
-          <section class="s40" id="fahrzeuge">
-            <div class="s47">
-              <div>
-                <span class="s35">An- &amp; Verkauf</span>
-                <h2 class="s36">
-                  Fahrzeuge im Bestand
-                </h2>
-              </div>
-              <p class="s48">
-                Beispielbestand — täglich kommen neue Fahrzeuge und
-                Gebrauchtkomponenten dazu. Ein Auszug aus dem aktuellen Hof:
-              </p>
-            </div>
-
-            <div class="s51" id="veh-teaser-grid">
-            </div>
-            <a href="fahrzeuge.html" class="btn btn-secondary teaser-cta">Alle Fahrzeuge ansehen</a>
           </section>
 
           <hr class="hr s28">
@@ -275,8 +275,8 @@
                 </h2>
               </div>
               <p class="s48">
-                Gebrauchte und neuwertige Teile für MAN, Mercedes, Scania, DAF
-                und Volvo. Ein Auszug aus dem Lager:
+                Gebrauchte und neuwertige Teile für MAN, Mercedes-Benz, Scania,
+                DAF und Volvo — direkt aus unserem Lager. Ein Auszug:
               </p>
             </div>
 
@@ -294,11 +294,10 @@
                 Sagen Sie uns, was ansteht.
               </h2>
               <p class="s60">
-                Ein Anruf reicht auch:
-                <a href="tel:+494070102052">040 / 70 10 20 52</a>. Schriftlich
-                geht es hier — nennen Sie Fahrzeug, Anliegen und Ihren
-                Wunschtermin, wir melden uns mit einer verbindlichen Zeit
-                zurück.
+                Ein Anruf reicht:
+                <a href="tel:+494070102052">040 / 70 10 20 52</a>. Oder
+                schreiben Sie uns hier — Fahrzeug, Anliegen und Wunschtermin
+                genügen, wir melden uns mit einer verbindlichen Zeit zurück.
               </p>
               <dl class="s61">
                 <dt class="s62">
@@ -405,11 +404,11 @@
             <div class="faq-list">
               <details class="faq-item">
                 <summary>Wie läuft die Hauptuntersuchung (HU) bei Ihnen ab?</summary>
-                <p>Sie bringen Ihr Fahrzeug zum vereinbarten Termin vorbei, wir nehmen HU, AU und SP direkt bei uns im Haus ab — ein zweiter Termin bei einer externen Prüfstelle entfällt. Bei Mängeln sagen wir Ihnen vor Ort, was zu tun ist.</p>
+                <p>Sie bringen Ihr Fahrzeug zum vereinbarten Termin vorbei, wir nehmen HU, AU und SP direkt bei uns im Haus ab — der zweite Termin bei einer externen Prüfstelle entfällt komplett. Gibt es Mängel, erklären wir Ihnen vor Ort in Ruhe, was zu tun ist.</p>
               </details>
               <details class="faq-item">
                 <summary>Bieten Sie einen Ersatzwagen oder Abholservice an?</summary>
-                <p>Sprechen Sie uns bei der Terminvereinbarung darauf an — je nach Werkstattauslastung finden wir eine Lösung, gerade bei Firmenfahrzeugen mit engem Zeitplan.</p>
+                <p>Sprechen Sie uns bei der Terminvereinbarung darauf an — je nach Werkstattauslastung finden wir eine Lösung, gerade wenn Ihr Firmenfahrzeug keine Zeit zum Stillstehen hat.</p>
               </details>
               <details class="faq-item">
                 <summary>Was passiert bei einer Panne außerhalb Ihrer Öffnungszeiten?</summary>
@@ -434,7 +433,7 @@
             <div class="ratgeber-grid">
               <article class="card">
                 <h3 class="card-title">Winter-Check für Nutzfahrzeuge</h3>
-                <p class="card-body">Batterie, Frostschutz, Bremsen und Reifenprofil verlieren im Winter am schnellsten an Reserve. Ein kurzer Check vor der kalten Jahreszeit spart oft einen teuren Ausfall mitten in der Tour.</p>
+                <p class="card-body">Der Winter fordert Batterie, Frostschutz, Bremsen und Reifenprofil zuerst. Ein kurzer Check vor der kalten Jahreszeit erspart Ihnen oft einen teuren Ausfall mitten in der Tour.</p>
               </article>
               <article class="card">
                 <h3 class="card-title">Wann steht die nächste HU an?</h3>
@@ -463,8 +462,12 @@
                 <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Lessingstra%C3%9Fe+59c,+21629+Neu+Wulmstorf" target="_blank" rel="noopener" class="btn btn-secondary s82">Route planen</a>
               </div>
               
-                <figure class="plate s28">
-                  <iframe class="s83" title="Karte: Lessingstraße 59c, 21629 Neu Wulmstorf" src="https://maps.google.com/maps?q=Lessingstra%C3%9Fe%2059c%2C%2021629%20Neu%20Wulmstorf&amp;z=15&amp;output=embed" loading="lazy"></iframe>
+                <figure class="plate s28 maps-figure" id="maps-figure">
+                  <iframe class="s83" title="Karte: Lessingstraße 59c, 21629 Neu Wulmstorf" data-src="https://maps.google.com/maps?q=Lessingstra%C3%9Fe%2059c%2C%2021629%20Neu%20Wulmstorf&amp;z=15&amp;output=embed" loading="lazy"></iframe>
+                  <div class="maps-overlay" id="maps-overlay">
+                    <p>Für die Karte wird eine Verbindung zu Google Maps hergestellt und Daten an Google übermittelt.</p>
+                    <button type="button" class="btn btn-primary" id="maps-load-btn">Karte laden</button>
+                  </div>
                 </figure>
               
             </div>
@@ -478,8 +481,8 @@
                 <span class="s41">Newsletter</span>
                 <h2 class="s36">Neue Fahrzeuge zuerst erfahren</h2>
                 <p class="s48">
-                  Kurze Mail, wenn neue Fahrzeuge oder Gebrauchtteile in den
-                  Bestand kommen. Kein Spam, jederzeit abbestellbar.
+                  Eine kurze Mail, sobald neue Fahrzeuge oder Gebrauchtteile
+                  reinkommen. Kein Spam, jederzeit abbestellbar.
                 </p>
               </div>
               <div class="card newsletter-card">
@@ -519,7 +522,6 @@
               </p>
             </div>
             <div class="s88">
-              <a href="fahrzeuge.html">Fahrzeuge</a>
               <a href="ersatzteile.html">Ersatzteile</a>
               <a href="#faq">FAQ</a>
               <a href="#ratgeber">Ratgeber</a>
@@ -538,6 +540,69 @@
   <span class="notfall-dot"></span>
   Notfall? Abschleppen anfordern
 </a>
+
+<div class="contact-fab" id="contact-fab">
+  <button type="button" class="fab-drag-handle" id="fab-drag-handle" aria-label="Position der Kontakt-Buttons verschieben">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><circle cx="9" cy="6" r="1.6"></circle><circle cx="15" cy="6" r="1.6"></circle><circle cx="9" cy="12" r="1.6"></circle><circle cx="15" cy="12" r="1.6"></circle><circle cx="9" cy="18" r="1.6"></circle><circle cx="15" cy="18" r="1.6"></circle></svg>
+  </button>
+  <a href="tel:+494070102052" class="fab-btn fab-call">
+    <span class="fab-icon" aria-hidden="true">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+    </span>
+    <span class="fab-label">040 / 70 10 20 52</span>
+  </a>
+  <a href="mailto:nds@nds-nutzfahrzeuge.de" class="fab-btn fab-mail">
+    <span class="fab-icon" aria-hidden="true">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+    </span>
+    <span class="fab-label">nds@nds-nutzfahrzeuge.de</span>
+  </a>
+</div>
+
+<button type="button" class="cookie-tab" id="cookie-tab">Cookie-Einstellungen</button>
+<div class="cookie-panel" id="cookie-panel" role="dialog" aria-modal="true" aria-labelledby="cookie-title" hidden>
+  <div class="cookie-panel-inner">
+    <div class="cookie-intro">
+      <p id="cookie-title">Diese Website nutzt Cookies bzw. Drittanbieterdienste nur mit Ihrem Einverständnis – jederzeit widerruflich und freiwillig.</p>
+    </div>
+    <div class="cookie-service">
+      <div class="cookie-row cookie-row-toggle">
+        <span class="cookie-label">Akzeptieren</span>
+        <label class="cookie-switch">
+          <input type="checkbox" id="cookie-maps-toggle">
+          <span class="cookie-switch-track"><span class="cookie-switch-thumb"></span></span>
+          <span class="cookie-switch-state" id="cookie-switch-state">Aus</span>
+        </label>
+      </div>
+      <div class="cookie-row">
+        <span class="cookie-label">Name</span>
+        <span class="cookie-value">Google Maps</span>
+      </div>
+      <div class="cookie-row">
+        <span class="cookie-label">Anbieter</span>
+        <span class="cookie-value">Google Ireland Limited</span>
+      </div>
+      <div class="cookie-row">
+        <span class="cookie-label">Zweck</span>
+        <span class="cookie-value">Zur Anzeige der Anfahrtskarte auf der Startseite werden Daten an Google übermittelt; Google kann dabei auch Cookies auf Ihrem Gerät speichern.</span>
+      </div>
+      <div class="cookie-row">
+        <span class="cookie-label">Datenschutz</span>
+        <span class="cookie-value"><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Maps</a></span>
+      </div>
+    </div>
+    <div class="cookie-actions">
+      <button type="button" class="cookie-btn-dark" id="cookie-save">Speichern</button>
+      <button type="button" class="cookie-btn-dark" id="cookie-accept-all">Alle akzeptieren</button>
+    </div>
+    <div class="cookie-links">
+      <a href="datenschutz.html">Datenschutzerklärung</a>
+      <a href="impressum.html">Impressum</a>
+      <button type="button" id="cookie-reset">Zurücksetzen</button>
+    </div>
+  </div>
+</div>
+
 <script src="catalog.js"></script>
 <script src="script.js"></script>
 </body>

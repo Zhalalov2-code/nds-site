@@ -296,5 +296,69 @@
           </footer>
         </div>
       </div>
+
+<div class="contact-fab" id="contact-fab">
+  <button type="button" class="fab-drag-handle" id="fab-drag-handle" aria-label="Position der Kontakt-Buttons verschieben">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><circle cx="9" cy="6" r="1.6"></circle><circle cx="15" cy="6" r="1.6"></circle><circle cx="9" cy="12" r="1.6"></circle><circle cx="15" cy="12" r="1.6"></circle><circle cx="9" cy="18" r="1.6"></circle><circle cx="15" cy="18" r="1.6"></circle></svg>
+  </button>
+  <a href="tel:+494070102052" class="fab-btn fab-call">
+    <span class="fab-icon" aria-hidden="true">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+    </span>
+    <span class="fab-label">040 / 70 10 20 52</span>
+  </a>
+  <a href="mailto:nds@nds-nutzfahrzeuge.de" class="fab-btn fab-mail">
+    <span class="fab-icon" aria-hidden="true">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+    </span>
+    <span class="fab-label">nds@nds-nutzfahrzeuge.de</span>
+  </a>
+</div>
+
+<button type="button" class="cookie-tab" id="cookie-tab">Cookie-Einstellungen</button>
+<div class="cookie-panel" id="cookie-panel" role="dialog" aria-modal="true" aria-labelledby="cookie-title" hidden>
+  <div class="cookie-panel-inner">
+    <div class="cookie-intro">
+      <p id="cookie-title">Diese Website nutzt Cookies bzw. Drittanbieterdienste nur mit Ihrem Einverständnis – jederzeit widerruflich und freiwillig.</p>
+    </div>
+    <div class="cookie-service">
+      <div class="cookie-row cookie-row-toggle">
+        <span class="cookie-label">Akzeptieren</span>
+        <label class="cookie-switch">
+          <input type="checkbox" id="cookie-maps-toggle">
+          <span class="cookie-switch-track"><span class="cookie-switch-thumb"></span></span>
+          <span class="cookie-switch-state" id="cookie-switch-state">Aus</span>
+        </label>
+      </div>
+      <div class="cookie-row">
+        <span class="cookie-label">Name</span>
+        <span class="cookie-value">Google Maps</span>
+      </div>
+      <div class="cookie-row">
+        <span class="cookie-label">Anbieter</span>
+        <span class="cookie-value">Google Ireland Limited</span>
+      </div>
+      <div class="cookie-row">
+        <span class="cookie-label">Zweck</span>
+        <span class="cookie-value">Zur Anzeige der Anfahrtskarte auf der Startseite werden Daten an Google übermittelt; Google kann dabei auch Cookies auf Ihrem Gerät speichern.</span>
+      </div>
+      <div class="cookie-row">
+        <span class="cookie-label">Datenschutz</span>
+        <span class="cookie-value"><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Maps</a></span>
+      </div>
+    </div>
+    <div class="cookie-actions">
+      <button type="button" class="cookie-btn-dark" id="cookie-save">Speichern</button>
+      <button type="button" class="cookie-btn-dark" id="cookie-accept-all">Alle akzeptieren</button>
+    </div>
+    <div class="cookie-links">
+      <a href="datenschutz.html">Datenschutzerklärung</a>
+      <a href="impressum.html">Impressum</a>
+      <button type="button" id="cookie-reset">Zurücksetzen</button>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
