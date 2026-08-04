@@ -2518,3 +2518,17 @@ image-slot::after {
   margin-top: 32px;
   display: inline-flex;
 }
+
+/* Image placeholder styling */
+.img-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: color-mix(in srgb, var(--color-text) 5%, var(--color-bg));
+  color: color-mix(in srgb, var(--color-text) 40%, transparent);
+  font-size: 13px;
+  font-weight: 500;
+  border-radius: 8px;
+  min-height: 200px;
+  width: 100%;
+}

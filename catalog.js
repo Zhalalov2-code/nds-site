@@ -22,7 +22,7 @@
 
   function imgTag(image, alt) {
     if (!image) {
-      return '<image-slot class="s53" shape="rect" placeholder="Foto folgt"></image-slot>';
+      return '<div class="s53 img-placeholder"><span>Foto folgt</span></div>';
     }
     return '<img class="s53" src="' + esc(image) + '" alt="' + esc(alt) + '">';
   }

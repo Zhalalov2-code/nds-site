@@ -1,6 +1,8 @@
 [build]
+  command = "echo 'Static site, no build needed'"
   publish = "."
 
 [dev]
   framework = "#static"
   publish = "."
+
